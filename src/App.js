@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Button from "./components/buttons";
 
 class App extends React.Component {
   constructor() {
@@ -24,15 +25,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Counter: {this.state.counter}</h1>
-        <button className="inc" onClick={this.increment}>
-          Counter
-        </button>
-        <button className="dec" onClick={this.decrement}>
-          Dec
-        </button>
-        <button className="reset" onClick={this.reset}>
-          Reset
-        </button>
+        <Button function={this.increment} btnName="increment" clsName="inc" />
+        <Button function={this.decrement} btnName="dec" clsName="dec" />
+        <Button function={this.reset} btnName="reset" clsName="res" />
       </div>
     );
   }
